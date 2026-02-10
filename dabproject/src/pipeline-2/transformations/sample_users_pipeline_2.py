@@ -6,7 +6,7 @@ from pyspark.sql.functions import col
 # using "+ Add" in the file browser.
 
 @dp.table
-def sample_users_pipeline3():
+def sample_users_pipeline_2():
     return (
         spark.read.table("samples.wanderbricks.users")
         .select("user_id", "email", "name", "user_type")

@@ -7,9 +7,9 @@ from utilities import utils
 # using "+ Add" in the file browser.
 
 @dp.table
-def sample_aggregation_demopipeline2():
+def sample_aggregation_pipeline_2():
     return (
-        spark.read.table("sample_users_demopipeline2")
+        spark.read.table("sample_users_pipeline_2")
         .withColumn("valid_email", utils.is_valid_email(col("email")))
         .groupBy(col("user_type"))
         .agg(
